@@ -12,5 +12,9 @@ app.use((req, res, next) => {
 })
 app.use( topsecretRoutes)
 
-app.listen(8080)
+const PORT = process.env.PORT || 8080
+
+app.listen(PORT, _ => {
+    console.log('Listening on port ' + PORT)
+})
 
