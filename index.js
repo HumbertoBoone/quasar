@@ -1,5 +1,4 @@
 const express = require('express')
-const feedRoutes = require('./routes/feed')
 const topsecretRoutes = require('./routes/topsecret.route')
 const bodyParser = require('body-parser')
 const app = express()
