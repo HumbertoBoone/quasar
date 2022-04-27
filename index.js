@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const app = express()
 
 app.use(bodyParser.json())
+
+// CORS 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'codepen.io', '*')
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
@@ -12,5 +14,9 @@ app.use((req, res, next) => {
 })
 app.use( topsecretRoutes)
 
-app.listen(8080)
+const PORT = 8080
+
+app.listen(PORT, _ => {
+    console.log('Listening on port ' + PORT)
+})
 

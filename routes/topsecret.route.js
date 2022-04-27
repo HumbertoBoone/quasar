@@ -1,5 +1,4 @@
 const express = require('express')
-const feedController = require('../controllers/feed')
 const topsecretController = require('../controllers/topsecret.controller')
 const router = express.Router()
 
